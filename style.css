@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Norse-Bold";
+    src: url(/assets/Norse-Bold.otf);
+}
+*{
+    /* outline: 2px solid red; */
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+:root{
+    --bg-main: #f4f1ea;
+    --bg-form: #ffffff;
+    --btn-color: #2881d5;
+    --btn-hover: #1e69b3; /* A slightly darker blue for hover effects */
+    --text-color: #2c3e50;
+    --accent: #e65d38; 
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    background-color: var(--bg-main);
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+aside{
+    position: relative;
+}
+.title{
+    position: absolute;
+    top: 25px;
+    background-color: rgba(0, 0, 0, 60%);
+    font: 4rem "Norse-Bold";
+    color : white;
+    width: 100%;
+    text-align: center;
+}
+
+.banner{
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+main{
+    width: 50vw;
+    background-color: white;
+}
