@@ -21,6 +21,7 @@ body{
     display: flex;
     height: 100vh;
     justify-content: center;
+    align-items: center;
     background-color: var(--bg-main);
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -28,6 +29,7 @@ body{
 
 aside{
     position: relative;
+    height: 100vh;
 }
 .title{
     position: absolute;
@@ -47,5 +49,18 @@ aside{
 
 main{
     width: 50vw;
+    
+}
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px 20px ;
     background-color: white;
+    padding: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+label{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
 }
