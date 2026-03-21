@@ -21,16 +21,16 @@
                 <h2>Let's do this!</h2>
                 <br>
                 <div>
-                    <label>FIRST NAME<input type="text"  name="first-name" ></label>
-                    <label>LAST NAME<input type="text" name="last-name"></label>
+                    <label>FIRST NAME<input type="text" pattern="^[a-zA-Z\\s]+$" name="first-name" minlength="1" autocomplete="given-name" placeholder="No-special-characters" required></label>
+                    <label>LAST NAME<input type="text" pattern="^[a-zA-Z\\s]+$" name="last-name" autocomplete="family-name" placeholder="No-special-characters" ></label>
                 </div>
                 <div>
-                    <label>EMAIL<input type="email" name="email"></label>
-                    <label>PHONE NUMBER<input type="number"></label>
+                    <label>EMAIL<input type="email" name="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" placeholder="dev@nsh.in" autocomplete="email" required></label>
+                    <label>PHONE NUMBER<input type="tel" pattern="[0-9]{10}" placeholder="10-digit-number" autocomplete="tel"></label>
                 </div>
                 <div>
-                    <label>PASSWORD<input type="password" required></label>
-                    <label>CONFIRM PASSWORD<input type="password" required></label>
+                    <label>PASSWORD<input type="password" autocomplete="current-password" required></label>
+                    <label>CONFIRM PASSWORD<input type="password"  autocomplete="current-password" required></label>
                 </div>
             </fieldset>
             <button type="submit">Create Account</button>
