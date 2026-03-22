@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🙋‍♂️</text></svg>">
     <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
     <title>Sign-up Form</title>
 </head>
 <body>
@@ -26,17 +27,25 @@
                 </div>
                 <div>
                     <label>EMAIL<input type="email" name="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" placeholder="dev@nsh.in" autocomplete="email" required></label>
-                    <label>PHONE NUMBER<input type="tel" pattern="[0-9]{10}" placeholder="10-digit-number" autocomplete="tel"></label>
+                    <label>PHONE NUMBER<input type="tel" name="phone" pattern="[0-9]{10}" placeholder="10-digit-number" autocomplete="tel"></label>
                 </div>
                 <div>
-                    <label>PASSWORD<input type="password" autocomplete="current-password" required></label>
-                    <label>CONFIRM PASSWORD<input type="password"  autocomplete="current-password" required></label>
+                    <label>PASSWORD<input type="password" name="password" autocomplete="new-password" required></label>
+                    <label>CONFIRM PASSWORD<input type="password" name="confirm-password" autocomplete="new-password" required></label>
                 </div>
             </fieldset>
             <button type="submit">Create Account</button>
             <div>Already have an account? <span>Log in</span></div>
         </form>
     </main>
-    
+    <!-- Summary Modal -->
+    <div id="summary-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>✅ Account Created!</h3>
+            <p>Here's what you submitted:</p>
+            <div id="modal-body"></div>
+            <button id="modal-close">Close</button>
+        </div>
+    </div>
 </body>
 </html>
